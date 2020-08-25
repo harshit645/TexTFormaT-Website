@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMEPAGE</title>
+</head>
+<body bgcolor="greenyellow">
+    <h1>Welcome to the text Analyser,please enter your text below!</h1>
+
+    <!-- resultfile is the location which we use in our urls.py file -->
+    <form action="analyzefile/" method="GET">
+
+    <textarea name="text" cols="150" rows="20" style="margin: 0px; width: 1381px; height: 266px;"></textarea>
+    <br>
+    <label for="pun">RemovePunctuations</label>
+    <input type="checkbox" id="pun" name="check1">
+    <br><br>
+
+    <label for="upp">UpperCase</label>
+    <input type="checkbox" id="upp" name="check2">
+    <br><br>
+    
+    <label for="low">LowerCase</label>
+    <input type="checkbox" id="low" name="check3">
+    <br><br>
+    
+    <label for="count">charactercount</label>
+    <input type="checkbox" id="count" name="check4">
+    <br><br>
+    
+    <label for="rev">Reverse</label>
+    <input type="checkbox" id="rev" name="check5">
+    <br><br>
+    
+    <input type="submit" value="Analyze text">
+
+</form>
+    
+    
+</body>
+</html>
