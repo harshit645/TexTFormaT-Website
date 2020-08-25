@@ -1,101 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>indexbootstrap</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>indexbootstrap</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">TexT FormaT</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="#">About us</a>
-            <a class="nav-link" href="#">Contact us</a>
-          </div>
-        </div>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-      </nav>
-      <div>
-        <div class="alert alert-success" role="alert">
-            A simple text formatting website—check it out!</div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">TexT FormaT</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">About us</a>
+        <a class="nav-link" href="#">Contact us</a>
+      </div>
+    </div>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  <div>
+    <div class="alert alert-success" role="alert">
+      A simple text formatting website—check it out!</div>
 
-            <div class="container my-2">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="sr-only">Loading...</span>
-                  </div>
-                  <div class="spinner-border text-secondary" role="status">
-                    <span class="sr-only">Loading...</span>
-                  </div>
-                  <div class="spinner-border text-success" role="status">
-                    <span class="sr-only">Loading...</span>
-                  </div>
-                  <div class="spinner-border text-danger" role="status">
-                    <span class="sr-only">Loading...</span>
-                  </div>
-                  <div class="spinner-border text-warning" role="status">
-                    <span class="sr-only">Loading...</span>
-                  </div>
-                  <div class="spinner-border text-info" role="status">
-                    <span class="sr-only">Loading...</span>
-                  </div>
-                  <div class="spinner-border text-light" role="status">
-                    <span class="sr-only">Loading...</span>
-                  </div>
-                  <div class="spinner-border text-dark" role="status">
-                    <span class="sr-only">Loading...</span>
-                  </div>
-            </div>
-            
-            <!-- csrf means cross side request forgery -->
-            <!-- jab bhi hame POST method use karna he kise bhi jagah toh hame csrf_token use karna hi padega,b'coz django provides this csrf_token-->
+    <div class="container my-2">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-border text-secondary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-border text-success" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-border text-danger" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-border text-warning" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-border text-info" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-border text-light" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-border text-dark" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
 
-        <form class="container" action="analyzefile/" method="POST">{%csrf_token%}
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1"><b>Welcome to the text formatting website ,Enter your text below</b></label>
-              <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="5"></textarea>
-            </div>
-            <div class="custom-control custom-switch">
-                <input type="checkbox" name="check1" class="custom-control-input" id="customSwitch1">
-                <label class="custom-control-label" for="customSwitch1">Remove Punctuations</label>
-              </div>
-            <div class="custom-control custom-switch">
-                <input type="checkbox" name="check2" class="custom-control-input" id="customSwitch2">
-                <label class="custom-control-label" for="customSwitch2">Upper Case</label>
-              </div>
-            <div class="custom-control custom-switch">
-                <input type="checkbox" name="check3" class="custom-control-input" id="customSwitch3">
-                <label class="custom-control-label" for="customSwitch3">Lower Case</label>
-              </div>
-            <div class="custom-control custom-switch">
-                <input type="checkbox" name="check4" class="custom-control-input" id="customSwitch4">
-                <label class="custom-control-label" for="customSwitch4">Character Count</label>
-              </div>
-            <div class="custom-control custom-switch">
-                <input type="checkbox" name="check5" class="custom-control-input" id="customSwitch5">
-                <label class="custom-control-label" for="customSwitch5">String Reverse</label>
-              </div>
-            <div class="custom-control custom-switch">
-                <input type="checkbox" name="check6" class="custom-control-input" id="customSwitch6">
-                <label class="custom-control-label" for="customSwitch6">Extraspace Remover</label>
-              </div>
+    <!-- csrf means cross side request forgery -->
+    <!-- jab bhi hame POST method use karna he kise bhi jagah toh hame csrf_token use karna hi padega,b'coz django provides this csrf_token-->
 
-            <button type="submit" class="btn btn-outline-dark mt-3">Analyze Text</button>
-
-          </form>
+    <form class="container" action="analyzefile/" method="POST">{%csrf_token%}
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1"><b>Welcome to the text formatting website ,Enter your text
+            below</b></label>
+        <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="5"></textarea>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="check1" class="custom-control-input" id="customSwitch1">
+        <label class="custom-control-label" for="customSwitch1">Remove Punctuations</label>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="check2" class="custom-control-input" id="customSwitch2">
+        <label class="custom-control-label" for="customSwitch2">Upper Case</label>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="check3" class="custom-control-input" id="customSwitch3">
+        <label class="custom-control-label" for="customSwitch3">Lower Case</label>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="check4" class="custom-control-input" id="customSwitch4">
+        <label class="custom-control-label" for="customSwitch4">Character Count</label>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="check5" class="custom-control-input" id="customSwitch5">
+        <label class="custom-control-label" for="customSwitch5">String Reverse</label>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="check6" class="custom-control-input" id="customSwitch6">
+        <label class="custom-control-label" for="customSwitch6">Extraspace Remover</label>
       </div>
 
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    
+      <button type="submit" class="btn btn-outline-dark mt-3">Analyze Text</button>
+
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="container-fluid fixed-bottom">
+    <p class="float-right"><a href="https://github.com/harshit645">Company</a></p>
+    <p>&copy; 2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
 </body>
+
 </html>
